@@ -2,4 +2,12 @@
   width: 100px;
   height: 100px;
   background-color: aqua;
+  transition-property: translate();
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+}
+
+.box:hover {
+  transform: translate(500px,0);
 }

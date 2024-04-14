@@ -1,13 +1,39 @@
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
-  transition-property: translate();
-  transition-duration: 3s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 1s;
+:root {
+  --my-btn-color:#272727;
 }
 
-.box:hover {
-  transform: translate(500px,0);
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-1 {
+  text-decoration: none;
+  color: var(--my-btn-color);
+  font-family: sans-serif;
+  font-size: 45px;
+  border: 5px solid var(--my-btn-color);
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-1:before {
+  content: '';
+  position:absolute;
+  left:0;
+  top:0;
+  background-color: #fff200;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+.btn-1:hover:before {
+  transform: rotate(0deg);
 }
